@@ -22,4 +22,11 @@ public class ManagerTest {
     public void hasNINumber(){
         assertEquals("AB 12 30 07 C", manager.getNINumber());
     }
+
+    @Test
+    public void hasSalary(){
+        assertEquals(50000.36, manager.getSalary(), 0.01);
+    }
+
+
 }
