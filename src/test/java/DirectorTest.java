@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 import management.Director;
-import techStaff.DatabaseAdmin;
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,6 +28,17 @@ public class DirectorTest {
     }
 
     @Test
+    public void hasBudget(){
+        assertEquals(100000.80, director.getBudget(), 0.01);
+    }
+
+    @Test
+    public void canChangeBudget(){
+        director.setBudget(150000.80);
+        assertEquals(150000.80, director.getBudget(), 0.001);
+    }
+
+    @Test
     public void testRaiseSalary(){
         director.raiseSalary(1000.14);
         assertEquals(71000.74, director.getSalary(), 0.01);
@@ -36,7 +46,8 @@ public class DirectorTest {
 
     @Test
     public void testPayBonus(){
-        assertEquals(700.006, director.payBonus(), 0.0001);
+        director.payBonus();
+        assertEquals(71400.612, director.getSalary(), 0.0001);
     }
 
 }

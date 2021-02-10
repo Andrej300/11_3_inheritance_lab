@@ -1,4 +1,3 @@
-import management.Manager;
 import techStaff.DatabaseAdmin;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +35,8 @@ public class DatabaseAdminTest {
 
     @Test
     public void testPayBonus(){
-        assertEquals(300.006, databaseAdmin.payBonus(), 0.0001);
+        databaseAdmin.payBonus();
+        assertEquals(30300.606, databaseAdmin.getSalary(), 0.0001);
     }
 
 }

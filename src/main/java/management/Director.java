@@ -1,7 +1,5 @@
 package management;
 
-import management.Manager;
-
 public class Director extends Manager{
     private double budget;
 
@@ -11,6 +9,14 @@ public class Director extends Manager{
     }
 
     public double getBudget(){
-        return this.budget = budget;
+        return this.budget;
+    }
+
+    public void setBudget(double budget){
+        this.budget = budget;
+    }
+
+    public void payBonus(){
+        this.salary += getSalary() / 50;
     }
 }

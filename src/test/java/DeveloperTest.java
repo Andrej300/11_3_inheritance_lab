@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import techStaff.DatabaseAdmin;
 import techStaff.Developer;
 
 import static org.junit.Assert.assertEquals;
@@ -36,7 +35,8 @@ public class DeveloperTest {
 
     @Test
     public void testPayBonus(){
-        assertEquals(300.006, developer.payBonus(), 0.0001);
+        developer.payBonus();
+        assertEquals(30300.606, developer.getSalary(), 0.0001);
     }
 
 }
