@@ -30,7 +30,8 @@ public class DeveloperTest {
 
     @Test
     public void testRaiseSalary(){
-        assertEquals(31000.74, developer.raiseSalary(1000.14), 0.01);
+        developer.raiseSalary(1000.14);
+        assertEquals(31000.74, developer.getSalary(), 0.01);
     }
 
     @Test

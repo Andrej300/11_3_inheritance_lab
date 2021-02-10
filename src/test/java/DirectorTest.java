@@ -30,7 +30,8 @@ public class DirectorTest {
 
     @Test
     public void testRaiseSalary(){
-        assertEquals(71000.74, director.raiseSalary(1000.14), 0.01);
+        director.raiseSalary(1000.14);
+        assertEquals(71000.74, director.getSalary(), 0.01);
     }
 
     @Test
