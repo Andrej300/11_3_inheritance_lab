@@ -46,7 +46,7 @@ public class ManagerTest {
 
     @Test
     public void canChangeName(){
-        manager.changeName("Eric");
-        assertEquals("Eric", manager.getName());
+        manager.changeName("Frank");
+        assertEquals("Frank", manager.getName());
     }
 }
