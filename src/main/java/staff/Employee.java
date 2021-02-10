@@ -29,6 +29,7 @@ public abstract class Employee {
 
     public double payBonus(){
         this.salary /= 100;
+//        this.salary = this.salary/100
         return this.salary;
     }
 }
